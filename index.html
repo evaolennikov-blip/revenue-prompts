@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revenue Prompts — AI Prompts That Make You Money</title>
-    <meta name="description" content="Tested AI prompts that generate leads, close sales, and create content that converts. $29 early access.">
+    <title>Revenue Prompts — 20 AI Prompts to Generate Leads & Sales</title>
+    <meta name="description" content="20 tested prompts + mini playbook to generate leads, sales, and content in 30 minutes. $29 one-time.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -19,56 +19,72 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         .container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
         
-        header { padding: 60px 0 40px; text-align: center; }
-        .badge { display: inline-block; background: rgba(34, 197, 94, 0.1); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; margin-bottom: 20px; border: 1px solid rgba(34, 197, 94, 0.2); }
-        h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2; }
+        header { padding: 50px 0 30px; text-align: center; }
+        .badge { display: inline-block; background: rgba(34, 197, 94, 0.1); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 500; margin-bottom: 15px; border: 1px solid rgba(34, 197, 94, 0.2); }
+        .badge-inline { display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: var(--accent); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 500; border: 1px solid rgba(34, 197, 94, 0.2); }
+        h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
         h1 span { color: var(--accent); }
-        .tagline { font-size: 1.2rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+        .tagline { font-size: 1.15rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 25px; line-height: 1.5; }
         
-        .hero-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin: 40px 0; text-align: center; }
-        .price { font-size: 3rem; font-weight: 700; color: var(--text); }
+        .hero-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 35px; margin: 30px 0; text-align: center; }
+        .price { font-size: 2.8rem; font-weight: 700; color: var(--text); }
         .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
-        .price-old { font-size: 1.5rem; color: var(--text-muted); text-decoration: line-through; margin-right: 10px; }
+        .price-old { font-size: 1.4rem; color: var(--text-muted); text-decoration: line-through; margin-right: 10px; }
         
         .btn { display: inline-block; background: var(--accent); color: #000; padding: 16px 40px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.2s; border: none; cursor: pointer; }
-        .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3); }
         .btn-full { width: 100%; }
         
-        .guarantee { color: var(--text-muted); font-size: 0.9rem; margin-top: 15px; }
+        .guarantee { color: var(--text-muted); font-size: 0.85rem; margin-top: 12px; }
+        .guarantee-highlight { color: var(--accent); font-weight: 500; }
         
-        section { padding: 40px 0; }
-        h2 { font-size: 1.5rem; margin-bottom: 20px; }
+        section { padding: 35px 0; }
+        h2 { font-size: 1.4rem; margin-bottom: 18px; }
         
-        .problem { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; }
+        .preview-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; }
+        .preview-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin-bottom: 12px; }
+        .preview-item:last-child { margin-bottom: 0; }
+        .preview-label { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .preview-prompt { font-family: monospace; font-size: 0.8rem; color: #d4d4d8; line-height: 1.5; }
+        
+        .what-you-get { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; }
+        .what-you-get ul { list-style: none; }
+        .what-you-get li { padding: 8px 0; color: var(--text-muted); display: flex; align-items: flex-start; gap: 10px; }
+        .what-you-get li::before { content: "✓"; color: var(--accent); font-weight: 600; }
+        
+        .problem { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; }
         .problem ul { list-style: none; }
-        .problem li { padding: 10px 0; color: var(--text-muted); }
-        .problem li::before { content: "✗ "; color: #ef4444; margin-right: 10px; }
+        .problem li { padding: 8px 0; color: var(--text-muted); }
+        .problem li::before { content: "✗ "; color: #ef4444; margin-right: 8px; }
         
-        .whats-inside { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; }
-        .prompt-list { display: grid; gap: 15px; }
-        .prompt-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
-        .prompt-item h4 { color: var(--accent); font-size: 0.9rem; margin-bottom: 8px; }
-        .prompt-item p { color: var(--text-muted); font-size: 0.9rem; }
-        .prompt-preview { background: #1a1a24; padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; color: #a1a1aa; margin-top: 10px; white-space: pre-wrap; overflow: hidden; max-height: 60px; }
+        .whats-inside { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; }
+        .prompt-list { display: grid; gap: 12px; }
+        .prompt-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+        .prompt-item h4 { color: var(--accent); font-size: 0.85rem; margin-bottom: 6px; }
+        .prompt-item p { color: var(--text-muted); font-size: 0.85rem; }
         
-        .social-proof { text-align: center; padding: 30 }
-        .statspx; { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .social-proof { text-align: center; padding: 25px 0; }
+        .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
         .stat { text-align: center; }
-        .stat-num { font-size: 2rem; font-weight: 700; color: var(--accent); }
-        .stat-label { font-size: 0.85rem; color: var(--text-muted); }
+        .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); }
         
-        .faq { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; }
+        .credibility { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; margin: 25px 0; }
+        .credibility p { color: var(--text-muted); font-size: 0.95rem; font-style: italic; }
+        
+        .faq { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; }
         .faq-item { padding: 15px 0; border-bottom: 1px solid var(--border); }
         .faq-item:last-child { border-bottom: none; }
-        .faq-q { font-weight: 600; margin-bottom: 8px; }
-        .faq-a { color: var(--text-muted); font-size: 0.95rem; }
+        .faq-q { font-weight: 600; margin-bottom: 6px; }
+        .faq-a { color: var(--text-muted); font-size: 0.9rem; }
         
-        footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.85rem; }
+        footer { text-align: center; padding: 30px 0; color: var(--text-muted); font-size: 0.8rem; }
         
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .hero-card { padding: 25px; }
             .price { font-size: 2.2rem; }
+            .stats { gap: 25px; }
         }
     </style>
 </head>
@@ -77,14 +93,50 @@
         <header>
             <div class="badge">🚀 Early Access — Limited Time</div>
             <h1>Revenue<span>Prompts</span></h1>
-            <p class="tagline">AI prompts that generate leads, close sales, and create content that converts. Tested. Documented. Profitable.</p>
+            <p class="tagline">20 tested prompts + mini playbook to generate leads, sales, and content in 30 minutes.</p>
+            <div class="badge-inline">⚡ Instant Download</div>
         </header>
         
         <div class="hero-card">
             <div><span class="price-old">$59</span><span class="price">$29 <span>one-time</span></span></div>
-            <p style="color: var(--text-muted); margin: 15px 0;">20 Premium Revenue-Generating Prompts</p>
-            <a href="https://buy.stripe.com/3cIcN602H4yP4E438S4Rq04" class="btn btn-full" target="_blank">Get Instant Access</a>
-            <p class="guarantee">🔒 Secure checkout • Instant download • 30-day money-back</p>
+            <p style="color: var(--text-muted); margin: 12px 0 20px;">20 Premium Revenue-Generating Prompts + Playbook</p>
+            <a href="https://buy.stripe.com/eVq4gA7v92qH1rSaBk4Rq05" class="btn btn-full" target="_blank">Get Instant Access ($29)</a>
+            <p class="guarantee"><span class="guarantee-highlight">🔒 Secure checkout via Stripe</span> • Instant download</p>
+            <p class="guarantee">If you don't find at least 3 prompts you'll reuse, email within 7 days for a full refund.</p>
+        </div>
+        
+        <section class="preview-section">
+            <h2>👀 Preview (3 of 20)</h2>
+            
+            <div class="preview-item">
+                <div class="preview-label">💰 Lead Gen Prompt</div>
+                <div class="preview-prompt">"Write a personalized cold email to a [role] at [company]. Focus on their specific pain point: [pain point]. Include one relevant case study from [industry]. End with one specific question about their [challenge]. Keep it under 150 words. Punchy. Direct."</div>
+            </div>
+            
+            <div class="preview-item">
+                <div class="preview-label">📲 Sales DM Prompt</div>
+                <div class="preview-prompt">"Write a LinkedIn connection request to [role] at [company]. Mention [specific insight about their work]. Suggest one way you could help them with [their goal]. Keep it under 100 words. Make it feel like a real human, not a template."</div>
+            </div>
+            
+            <div class="preview-item">
+                <div class="preview-label">🔥 Content Hook Prompt</div>
+                <div class="preview-prompt">"Generate 10 viral hooks for [topic] using these frameworks: counter-intuitive claim, numbers + transformation, embarrassing admission, controversial take. For each hook, explain WHY it works and what emotion it triggers."</div>
+            </div>
+        </section>
+        
+        <section class="what-you-get">
+            <h2>✅ What You Get</h2>
+            <ul>
+                <li><strong>20 revenue prompts</strong> — lead gen, sales, content, and operations</li>
+                <li><strong>Mini playbook</strong> — how to run each prompt + how to iterate for better results</li>
+                <li><strong>Copy/paste format</strong> — works with ChatGPT, Claude, Gemini, any LLM</li>
+                <li><strong>Instant download</strong> — get access immediately after payment</li>
+                <li><strong>Unlimited commercial use</strong> — use on unlimited projects</li>
+            </ul>
+        </section>
+        
+        <div class="credibility">
+            <p>"Built for indie founders. Focused on outputs, not 'prompt fluff'."</p>
         </div>
         
         <section class="problem">
@@ -98,51 +150,44 @@
         </section>
         
         <section class="whats-inside">
-            <h2>📦 What's Inside the Pack</h2>
+            <h2>📦 What's Inside</h2>
             <div class="prompt-list">
                 <div class="prompt-item">
-                    <h4>💰 Cold Outreach Generator</h4>
-                    <p>Generate personalized cold emails that actually get responses</p>
-                    <div class="prompt-preview">Write a cold email to [role] at [company] about...</div>
+                    <h4>💰 Cold Outreach (4 prompts)</h4>
+                    <p>Emails, LinkedIn requests, follow-ups, referral asks</p>
                 </div>
                 <div class="prompt-item">
-                    <h4>📈 SEO Content Brief Builder</h4>
-                    <p>Create content briefs that rank and drive organic traffic</p>
-                    <div class="prompt-preview">Create an SEO content brief for [keyword] targeting...</div>
+                    <h4>📈 Content Creation (5 prompts)</h4>
+                    <p>Hooks, SEO briefs, threads, newsletters, outlines</p>
                 </div>
                 <div class="prompt-item">
-                    <h4>🔥 Viral Hook Generator</h4>
-                    <p>Write scroll-stopping hooks for X, LinkedIn, and newsletters</p>
-                    <div class="prompt-preview">Generate 10 viral hooks for [topic] using the...</div>
+                    <h4>🎯 Sales (4 prompts)</h4>
+                    <p>Pricing pages, objection handlers, discovery questions</p>
                 </div>
                 <div class="prompt-item">
-                    <h4>🎯 Product Description Converter</h4>
-                    <p>Turn features into benefits that sell</p>
-                    <div class="prompt-preview">Transform these features into benefit-driven...</div>
+                    <h4>📞 Operations (4 prompts)</h4>
+                    <p>Meeting notes, support responses, FAQs, email templates</p>
                 </div>
                 <div class="prompt-item">
-                    <h4>📞 Sales Call Summarizer</h4>
-                    <p>Extract actionable insights from sales calls instantly</p>
-                    <div class="prompt-preview">Analyze this sales call transcript and extract...</div>
+                    <h4>🔧 Strategy (3 prompts)</h4>
+                    <p>Competitor analysis, growth experiments, brand voice</p>
                 </div>
             </div>
-            <p style="margin-top: 20px; color: var(--text-muted);">+ 15 more prompts for pricing, FAQ, landing pages, and more</p>
         </section>
         
         <section class="social-proof">
-            <h2>Why This Pack Works</h2>
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-num">20+</div>
-                    <div class="stat-label">Tested Prompts</div>
+                    <div class="stat-num">20</div>
+                    <div class="stat-label">Prompts</div>
                 </div>
                 <div class="stat">
                     <div class="stat-num">5</div>
-                    <div class="stat-label">Revenue Verticals</div>
+                    <div class="stat-label">Categories</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-num">100%</div>
-                    <div class="stat-label">Documented Results</div>
+                    <div class="stat-num">1</div>
+                    <div class="stat-label">Playbook</div>
                 </div>
             </div>
         </section>
@@ -150,32 +195,32 @@
         <section class="faq">
             <h2>❓ FAQ</h2>
             <div class="faq-item">
-                <div class="faq-q">What format is this delivered in?</div>
-                <div class="faq-a">Markdown + Notion template. Copy-paste ready.</div>
+                <div class="faq-q">Who is this for?</div>
+                <div class="faq-a">Indie founders, solopreneurs, and small startup teams who need to generate leads and sales without a big marketing budget.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Do I need ChatGPT Plus?</div>
-                <div class="faq-a">Nope. Works with free ChatGPT, Claude, Gemini, any LLM.</div>
+                <div class="faq-q">Who is this NOT for?</div>
+                <div class="faq-a">If you already have a proven prompt system for revenue generation, this probably isn't for you. These are starting points, not magic.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Can I use these for client work?</div>
-                <div class="faq-a">Yes! Unlimited commercial use included.</div>
+                <div class="faq-q">Do I need to be technical?</div>
+                <div class="faq-a">Nope. Just copy the prompts, fill in the brackets with your details, and paste into any AI. That's it.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">What's the refund policy?</div>
-                <div class="faq-a">30-day money-back guarantee. No questions asked.</div>
+                <div class="faq-a">If you don't find at least 3 prompts you'll reuse, email within 7 days for a full refund. No questions asked.</div>
             </div>
         </section>
         
-        <div class="hero-card" style="margin-top: 40px;">
+        <div class="hero-card" style="margin-top: 30px;">
             <div><span class="price-old">$59</span><span class="price">$29 <span>one-time</span></span></div>
-            <p style="color: var(--text-muted); margin: 15px 0;">Get the prompts that generate revenue. Not just engagement.</p>
-            <a href="https://buy.stripe.com/3cIcN602H4yP4E438S4Rq04" class="btn btn-full" target="_blank">Get Instant Access →</a>
+            <p style="color: var(--text-muted); margin: 12px 0 20px;">Start generating leads in 30 minutes.</p>
+            <a href="https://buy.stripe.com/eVq4gA7v92qH1rSaBk4Rq05" class="btn btn-full" target="_blank">Get Instant Access ($29) →</a>
+            <p class="guarantee">7-day refund guarantee • No questions asked</p>
         </div>
         
         <footer>
             <p>© 2026 RevenuePrompts. All rights reserved.</p>
-            <p style="margin-top: 10px;"><a href="#" style="color: var(--text-muted);">Privacy</a> • <a href="#" style="color: var(--text-muted);">Terms</a> • <a href="#" style="color: var(--text-muted);">Contact</a></p>
         </footer>
     </div>
 </body>
